@@ -1,0 +1,93 @@
+/* Background body */
+body {
+    background: #4b6cb7;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #182848, #4b6cb7);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #182848, #4b6cb7);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+/*############# ESTILOS EN LAS LETRAS ##############*/
+/* TITLE OF THE APP */
+.Title {
+    color: red;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* TITLE TOTAL COMFIRMED */
+.letraComfirmados {
+    color: black;
+    font-size: 35px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/* NUMBER TOTAL CONFIRMED */
+.numeroComfirmado {
+    color: black;
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/* TITLE TOTAL RECIVED */
+.letraRecivered {
+    color: green;
+    font-size: 35px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/* NUMBER TOTAL RECOVERED */
+.numeroRecivered {
+    color: green;
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* TITLE TOTAL DEATHS */
+.letraDeaths {
+    color: red;
+    font-size: 35px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* NUMBER TOTAL DEATHS */
+.numeroDeaths {
+    color: red;
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ################################################# */
+
+
+/* SEARCH INPUT */
+.inputSize {
+    width: 100%;
+    font-size: 20px;
+}
+
+/* DIV OF TOTAL VALUES */
+.divTotales {
+    background-color: white;
+    border-radius: 15px;
+    height: 140px;
+    width: 100%;
+    padding: 10px;
+}
+
+.divContent {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+
+#cards {
+    background-color: white;
+}

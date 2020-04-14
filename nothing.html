@@ -1,0 +1,15 @@
+<div class="card text-center" id="car">
+    <div class="card-header">
+        <%- country.name %>
+    </div>
+    <div class="card-body">
+        <h5>Comfirmados: <%- numberWithCommas(country.latest_data.confirmed) %></h5>
+        <h5>Recuperados: <%- numberWithCommas(country.latest_data.recovered) %></h5>
+        <h5>Decesos: <%- numberWithCommas(country.latest_data.deaths) %></h5>
+    </div>
+    <div class="card-footer text-muted">
+        <% option = {year: 'numeric', month: 'long', day: 'numeric'} %>
+        <% let dat = new Date(country.updated_at); %>
+        <%- dat.toLocaleDateString("es-ES", option); %>
+    </div>
+</div>

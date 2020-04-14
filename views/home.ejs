@@ -1,0 +1,80 @@
+<% layout('layout/main') %>
+
+<div class="container">
+    <% function numberWithCommas(x) { %>
+    <% return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); %>
+    <% } %>
+    <!-- TITULO -->
+    <div class="row">
+        <div class="col">
+            <div class="Title text-center">
+                <span>COVID-19(SARS-CoV-2)</span>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- DATOS TOTALES -->
+    <div class="row">
+        <div class="col-md-4 mb-5">
+            <div class="divTotales text-center">
+                <span class="letraComfirmados">Confirmed</span><br>
+                <span class="numeroComfirmado"><%- numberWithCommas(total.confirmed) %></span>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="divTotales text-center">
+                <span class="letraRecivered">Recovered</span><br>
+                <span class="numeroRecivered"><%- numberWithCommas(total.recovered) %></span>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="divTotales text-center">
+                <span class="letraDeaths">Deaths</span><br>
+                <span class="numeroDeaths"><%- numberWithCommas(total.deaths) %></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- BARRA BUSCADOR -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="divSearchBar">
+                <input type="text" id="txt" placeholder="FIND YOUR COUNTRY" class="form-control inputSize">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- TOTAL PAISES -->
+<br><br>
+<div class="container-fluid">
+    <div class="row" id="divCountry">
+
+        <% countries.map(country => { %>
+
+
+        <div class="col-md-2 mb-5">
+            <div class="card-header" id="cards">
+                <h3><%- country.name %></h3>
+            </div>
+            <div class="card-body" id="cards">
+                <h5>Comfirmados: <%- numberWithCommas(country.latest_data.confirmed) %></h5>
+                <h5>Recuperados: <%- numberWithCommas(country.latest_data.recovered) %></h5>
+                <h5>Decesos: <%- numberWithCommas(country.latest_data.deaths) %></h5>
+            </div>
+            <div class="card-footer text-muted" id="cards">
+                <% option = {year: 'numeric', month: 'long', day: 'numeric', hour12 : true, hour:  "2-digit", minute: "2-digit", second: "2-digit"} %>
+                <% let dat = new Date(country.updated_at); %>
+                <%- dat.toLocaleString("es-ES", option); %>
+            </div>
+        </div>
+
+        <% }); %>
+
+
+    </div>
+</div>
+</div>
+</div>
