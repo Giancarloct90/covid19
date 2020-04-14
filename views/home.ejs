@@ -39,10 +39,11 @@
     <!-- BARRA BUSCADOR -->
     <div class="row">
         <div class="col-md-12">
-            <div class="divSearchBar">
-                <input type="text" id="txt" placeholder="FIND YOUR COUNTRY" class="form-control inputSize">
-            </div>
+            <input type="text" id="txt" placeholder="FIND YOUR COUNTRY..." class="form-control inputSize input100"
+                style="position:relative;">
+            <span style="position:absolute; left:25px;top:16px;" class="fa fa-search fa-lg"></span>
         </div>
+
     </div>
 
 </div>
@@ -56,15 +57,15 @@
 
 
         <div class="col-md-2 mb-5">
-            <div class="card-header" id="cards">
-                <h3><%- country.name %></h3>
+            <div class="card-header" id="cards2">
+                <h4><%- country.name %></h4>
             </div>
             <div class="card-body" id="cards">
-                <h5>Comfirmados: <%- numberWithCommas(country.latest_data.confirmed) %></h5>
-                <h5>Recuperados: <%- numberWithCommas(country.latest_data.recovered) %></h5>
-                <h5>Decesos: <%- numberWithCommas(country.latest_data.deaths) %></h5>
+                <h6>Confirmed: <%- numberWithCommas(country.latest_data.confirmed) %></h6>
+                <h6>Recovered: <%- numberWithCommas(country.latest_data.recovered) %></h6>
+                <h6>Deaths: <%- numberWithCommas(country.latest_data.deaths) %></h6>
             </div>
-            <div class="card-footer text-muted" id="cards">
+            <div class="card-footer text-muted" id="cards3">
                 <% option = {year: 'numeric', month: 'long', day: 'numeric', hour12 : true, hour:  "2-digit", minute: "2-digit", second: "2-digit"} %>
                 <% let dat = new Date(country.updated_at); %>
                 <%- dat.toLocaleString("es-ES", option); %>

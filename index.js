@@ -14,5 +14,5 @@ app.set('view engine', 'ejs');
 // CONFIGURATION ROUTES
 app.use(require('./routes/index'));
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
 console.log('Online baby');
