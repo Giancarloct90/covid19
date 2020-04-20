@@ -17,4 +17,10 @@ app.get('/', async (req, res) => {
     }
 
 });
+
+app.get('/charts', async (req, res) => {
+    res.render('charts');
+});
+
+
 module.exports = app;

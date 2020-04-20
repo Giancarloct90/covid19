@@ -11,10 +11,38 @@ body {
 
 /*############# ESTILOS EN LAS LETRAS ##############*/
 /* TITLE OF THE APP */
+.divChart {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#firtConfirmed {
+    font-family: 'Poppins', sans-serif;
+    color: #F0B949;
+    font-size: 20px;
+}
+
+
+#titleChart {
+    font-family: 'Poppins', sans-serif;
+    color: #F0B949;
+    font-size: 30px;
+}
+
+.subTitle {
+    font-family: 'Poppins', sans-serif;
+    color: #F0B949;
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
 .Title {
     color: #F0B949;
-    margin-top: 50px;
-    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 25px;
     font-size: 55px;
     font-family: 'Poppins', sans-serif;
 }
