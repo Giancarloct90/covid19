@@ -48,6 +48,7 @@ async function loadCountry() {
 
 // DRAWING THE CHART
 async function chart(country) {
+    const jajaja;
     let myChart2 = document.getElementById('myChart'); // child canvas
     divChart.removeChild(myChart2);
     divChart.appendChild(document.createElement("canvas"));
