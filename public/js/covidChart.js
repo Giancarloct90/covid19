@@ -2,7 +2,7 @@
 const btnClickme = document.getElementById('btnClickme');
 const cbxContry = document.getElementById('cbxContry');
 const titleChart = document.getElementById('titleChart');
-const divChart = document.getElementById('divChart');
+const divChart = document.getElementById('divChart'); // parent's canvas
 const firtConfirmed = document.getElementById('firtConfirmed');
 loadCountry();
 
@@ -48,6 +48,10 @@ async function loadCountry() {
 
 // DRAWING THE CHART
 async function chart(country) {
+    let myChart2 = document.getElementById('myChart'); // child canvas
+    divChart.removeChild(myChart2);
+    divChart.appendChild(document.createElement("canvas"));
+    divChart.getElementsByTagName("canvas")[0].id = "myChart";
     divChart.style.display = "";
     let countries = await fetch('https://pomber.github.io/covid19/timeseries.json');
     let countriesDB = await countries.json();
