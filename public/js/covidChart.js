@@ -105,5 +105,21 @@ async function chart(country) {
                 }
             ]
         },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        // Include a dollar sign in the ticks
+                        callback: function (value, index, values) {
+                            return numberWithCommas(value);
+                        }
+                    }
+                }]
+            }
+        }
     });
+}
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
